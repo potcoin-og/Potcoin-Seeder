@@ -342,13 +342,13 @@ extern "C" void* ThreadStats(void*) {
   } while(1);
 }
 
-static const string mainnet_seeds[] = {"dnsseedz.potcoin.info", ""};
+static const string mainnet_seeds[] = {"seed001.potcoin-og.com", ""};
 static const string testnet_seeds[] = {"testnet.potcoin.info", ""};
 static const string *seeds = mainnet_seeds;
 
 extern "C" void* ThreadSeeder(void*) {
   if (!fTestNet){
-	db.Add(CService("208.66.68.120", GetDefaultPort()), true);
+	db.Add(CService("35.231.13.93", GetDefaultPort()), true);
   }
   do {
     for (int i=0; seeds[i] != ""; i++) {
